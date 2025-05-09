@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('fondo.png');
+    background-image: url("fondo.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -210,7 +210,7 @@ body, html {
 }
 
 .inicio-header {
-    background-image: url('fondo.png'); /* imagen de fondo */
+    background-image: url("fondo.png"); /* imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 100vh;
