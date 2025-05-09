@@ -1,0 +1,378 @@
+/* Variables de color Pollo Campero */
+:root {
+    --campero-yellow: #F7A400;
+    --campero-red: #7A2319;
+    --text-celeste: #87eb98;
+    --text-white: #ffffff;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("C:/Users/crist/OneDrive/Desktop/proyectopollo/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--text-celeste);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--campero-yellow);
+    margin-bottom: 10px;
+    font-size: 100px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--text-celeste);
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    background-color: var(--campero-red);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--campero-red);
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+    opacity: 0;
+    animation: fadeInDown 0.8s forwards;
+}
+
+nav ul li:nth-child(1) { animation-delay: 0.1s; }
+nav ul li:nth-child(2) { animation-delay: 0.3s; }
+nav ul li:nth-child(3) { animation-delay: 0.5s; }
+nav ul li:nth-child(4) { animation-delay: 0.7s; }
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: var(--text-celeste);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: var(--campero-yellow);
+    color: var(--text-white);
+    border-radius: 5px;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Galería */
+.galeria {
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    justify-items: center;
+}
+
+.galeria .foto img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.galeria .foto img:hover {
+    transform: scale(1.05);
+}
+
+.galeria .foto p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--text-celeste);
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-celeste);
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+form button {
+    padding: 10px;
+    background-color: var(--campero-yellow);
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: var(--campero-red);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--campero-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p, section ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.galeria.html {
+    margin: 10px;
+    width: 200px; /* opcional: ajustar tamaño */
+    height: auto;
+    border-radius: 8px; /* opcional: esquinas redondeadas */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+}
+
+.inicio-header {
+    background-image: url('../img/fondo-pollo.jpg'); /* imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.contenido-inicio {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fcb900;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background-color: #e0a800;
+}
+.menu {
+    background-color: #fff4e0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #d35400;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plato {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.plato:hover {
+    transform: translateY(-5px);
+}
+
+.plato img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.plato h3 {
+    margin-top: 15px;
+    color: #e67e22;
+}
+
+.plato p {
+    color: #555;
+    font-size: 0.95em;
+}
+.contacto {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contacto h2 {
+    color: #d35400;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.formulario button {
+    padding: 12px;
+    background-color: #fcb900;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #e0a800;
+}
+.proyecto {
+    background-color: #fff4e0;
+    padding: 150px 50px;
+    text-align: center;
+    border-top: 3px solid #fcb900;
+}
+
+.proyecto h2 {
+    font-size: 3em;
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+.proyecto p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.proyecto ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    color: #74f41e;
+}
+
+.proyecto ul li {
+    margin: 10px 0;
+    font-size: 60px;
+}
+.proyecto footer{
+    color: #d35400;
+}
